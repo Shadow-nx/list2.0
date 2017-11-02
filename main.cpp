@@ -7,7 +7,8 @@ struct Node {
 	int data;
 	Node *next;
 };
-void show_list(Node *curr) {
+void show_list(Node *first) {
+	Node *curr=first;
 	if(curr != nullptr) {
 		do {
 			cout<<curr->data;
@@ -92,10 +93,9 @@ int main(int argc,char *argv[]) {
 	do {
 		print_menu();
 		cin>>choice;
-		Node *curr=first;
 		switch(choice) {
 			case 1:
-				show_list(curr);
+				show_list(first);
 				break;
 			case 2:
 				break;
